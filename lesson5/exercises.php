@@ -40,7 +40,7 @@ Funkcija grąžina: funkcija nieko negrąžina
 */
 
 /*
-4. Parašykite funkciją 'textReplicator', kuri grąžintų 'padaugintą' tekstą.
+5. Parašykite funkciją 'textReplicator', kuri grąžintų 'padaugintą' tekstą.
 
 Funkcijos kvietimas:
 textReplicator('some_text', 3);
@@ -54,5 +54,5 @@ Funkcija grąžina: 'some_text'
 */
 
 /*
-4. Paverskite funkciją 'textReplicator', į veikiančią anoniminę funkciją.
+6. Paverskite funkciją 'textReplicator', į veikiančią anoniminę funkciją.
 */
