@@ -1,75 +1,110 @@
 <?php
-
 declare(strict_types=1);
 
-function getCities(): array
-{
-    return [
-        [
-            'name' => 'Tokyo',
-            'population' => 37435191,
-        ],
-        [
-            'name' => 'Delhi',
-            'population' => 29399141,
-        ],
-        [
-            'name' => 'Shanghai',
-            'population' => 26317104,
-        ],
-        [
-            'name' => 'Sao Paulo',
-            'population' => 21846507,
-        ],
-        [
-            'name' => 'Mexico City',
-            'population' => 21671908,
-        ],
-        [
-            'name' => 'New York',
-            'population' => 25000000,
-        ],
-    ];
-}
+$globalCities = [
+    [
+        'name' => 'Tokyo',
+        'population' => 37_435_191,
+    ],
+    [
+        'name' => 'Delhi',
+        'population' => 29399141,
+    ],
+    [
+        'name' => 'Shanghai',
+        'population' => 26317104,
+    ],
+    [
+        'name' => 'Sao Paulo',
+        'population' => 21846507,
+    ],
+    [
+        'name' => 'Mexico City',
+        'population' => 21671908,
+    ],
+    [
+        'name' => 'New York',
+        'population' => 25000000,
+    ],
+];
 
-function exercise1(): int
+function exercise1($cities): int
 {
     /*
     Suskaičiuokite bendrą miestų populiaciją pasinaudodami paprastu 'foreach' ir grąžinkite ją iš funkcijos.
     Miestus pasiimkite iškvietę funkciją 'getCities'
     */
+    $sum = 0;
+    
+    foreach ($cities as $city) {
+        $sum = $sum + $city['population'];
+    }
 
-    return 0;
+    return $sum;
 }
 
-function exercise2(): int
+// var_dump( exercise1($globalCities) );
+
+function exercise2(array $cities): int
 {
     /*
     Suskaičiuokite bendrą miestų populiaciją pasinaudodami funkcijomis array_column ir array_sum
     ir grąžinkite ją iš funkcijos
     */
 
-    return 0;
+    return array_sum(array_column($cities, 'population'));
 }
 
-function exercise3(): int
+// var_dump( exercise2($globalCities) );
+
+function exercise3(array $cities): int
 {
     /*
     Suskaičiuokite bendrą miestų populiaciją pasinaudodami funkcija array_reduce ir grąžinkite ją iš funkcijos
     */
 
-    return 0;
+    return array_reduce(
+        $cities,
+        function(int $carry, array $city) {
+            return $carry + $city['population'];
+        },
+        0
+    );
 }
 
-function exercise4(): int
+// var_dump( exercise3($globalCities) );
+
+function exercise4(array $cities): int
 {
     /*
     Suskaičiuokite populiaciją miestų, kurie yra didesni nei 25,000,000 gyventojų.
     Rinkites sau patogiausią skaičiavimo būdą.
     */
 
-    return 0;
+    $largeCities = array_filter(
+        $cities,
+        function(array $city): bool {
+            return $city['population'] > 25_000_000;
+        }
+    );
+
+    // var_dump($largeCities);
+
+    return exercise2($largeCities);
+
+    // return array_reduce(
+    //     $cities,
+    //     function(int $carry, array $city) {
+    //         if ($city['population'] <= 25_000_000)
+    //             return $carry;
+    //         else
+    //             return $carry + $city['population'];
+    //     },
+    //     0
+    // );
 }
+
+var_dump( exercise4($globalCities) );
 
 function exercise5(): array
 {
