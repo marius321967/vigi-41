@@ -15,5 +15,20 @@
     <input type="submit">
   </form>
 
+  <?php
+  $fileContents = file_get_contents('todo.json');
+  $todoList = json_decode($fileContents, true);
+  ?>
+
+  <div>
+    <h2>TODO list</h2>
+
+    <ul>
+      <?php foreach ($todoList as $todoItem) : ?>
+        <li><?= $todoItem['todo'] ?></li>
+      <?php endforeach ?>
+    </ul>
+  </div>
+
 </body>
 </html>
