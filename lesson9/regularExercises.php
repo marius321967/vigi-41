@@ -40,10 +40,12 @@ function exercise3(): void
 - 2000/02/15 08:30:00 PM
 - 2000 March 2nd 15:30:00
 */
-function exercise4(): void
+function exercise4(): DateTime
 {
-
+    return new DateTime('');
 }
+
+var_dump(exercise4());
 
 /*
 5. Sukurkite datą iš '15th Jan 2021 8:15:01 PM' (data X). Pamodifikuokite, kad gautumėte:
