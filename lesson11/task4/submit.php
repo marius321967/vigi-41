@@ -45,7 +45,6 @@ function writeNewTodoList(string $file, array $todoList): void {
 
 $oldTodo = readOldTodoList($file);
 $newTodo = includeNewTodo($oldTodo, $_POST['todo']);
-var_dump($oldTodo, $newTodo);
 writeNewTodoList($file, $newTodo);
 
 // obtain old todo list
