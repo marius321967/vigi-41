@@ -2,7 +2,7 @@
    Kiekvienas skaičius turi išspausdintas naujoje eilutėje.
    100
    102
-   103
+   104
    ...
 
 2. Pasinaudodami masyvo operatoriumi paimkite elementą, kurio reikšmė yra 555 ir grąžinkite tą reikšmę iš funkcijos.
