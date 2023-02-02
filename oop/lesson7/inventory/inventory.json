@@ -1,0 +1,27 @@
+[
+  {
+    "product_id": 1,
+    "name": "Lamp",
+    "quantity": 15
+  },
+  {
+    "product_id": 2,
+    "name": "Sofa",
+    "quantity": 15
+  },
+  {
+    "product_id": 3,
+    "name": "Cupboard",
+    "quantity": 6
+  },
+  {
+    "product_id": 4,
+    "name": "Desk",
+    "quantity": 2
+  },
+  {
+    "product_id": 5,
+    "name": "Shelf",
+    "quantity": 0
+  }
+]
