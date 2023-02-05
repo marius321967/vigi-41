@@ -1,0 +1,6 @@
+1.1
+'Inverntory checker' projekte, pasinaudodami composer, įsirašykite lib'ą 'psr/log'. Klasėse, kuriose naudojamas logeris,
+panaudokite '\Psr\Log\LoggerAwareTrait' traitą.
+
+1.2
+Tame pačiame 'Inverntory checker' inputo validatorių perkelkite į savo pačių aprašytą traitą.
